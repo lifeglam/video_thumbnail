@@ -208,7 +208,7 @@ public class VideoThumbnailPlugin implements FlutterPlugin, MethodCallHandler {
                     // API Level 27
                     bitmap = retriever.getScaledFrameAtTime(timeMs * 1000, MediaMetadataRetriever.OPTION_CLOSEST, targetW, targetH);
                 } else {
-                    bitmap = retriever.getFrameAtTime(timeMs * 1000);
+                    bitmap = retriever.getFrameAtTime(timeMs * 1000, MediaMetadataRetriever.OPTION_CLOSEST);
                     if (bitmap != null) {
                         int width = bitmap.getWidth();
                         int height = bitmap.getHeight();
